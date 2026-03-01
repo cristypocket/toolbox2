@@ -394,7 +394,8 @@ const state = {
   query: "",
   filter: "",
   showFavs: false,
-  favorites: new Set()
+  favorites: new Set(),
+  lang: "fr", 
 };
 
 // -------------------------
@@ -402,6 +403,7 @@ const state = {
 // -------------------------
 const LS_FAVS = "toolbox_favorites_v1";
 const LS_THEME = "toolbox_theme_v1";
+const LS_LANG = "toolbox_lang_v1";
 
 // -------------------------
 // DOM
@@ -414,6 +416,7 @@ const clearFiltersBtn = document.getElementById("clearFilters");
 const favBtn = document.getElementById("toggleFavs");
 const favCount = document.getElementById("favCount");
 const themeBtn = document.getElementById("toggleTheme");
+const langBtn = document.getElementById("toggleLang");
 
 const toolModal = document.getElementById("toolModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -470,6 +473,160 @@ function safeShowModal(d){
   return false;
 }
 
+// -------------------------
+// i18n (UI only)
+// -------------------------
+const LANG_FR = "fr";
+const LANG_EN = "en";
+
+const I18N = {
+  fr: {
+    brand_title: "Boîte à outils",
+
+    // nav / actions
+    favs: "★ Favoris",
+    theme_dark: "🌙 Mode nuit",
+    theme_light: "☀️ Mode jour",
+    reset: "↺ Réinitialiser",
+    search_placeholder: "Rechercher un outil…",
+
+    // hero
+    hero_title: "Ton sanctuaire de régulation",
+    hero_subtitle: "Des outils doux pour apaiser le système nerveux, la douleur et l’énergie.",
+    breath2min: "🌬 Respiration 2 min",
+    random_tool: "🎲 Outil aléatoire",
+
+    // library
+    active_filter: "Filtre actif :",
+    none: "Aucun",
+
+    // empty state
+    empty_title: "Aucun résultat",
+    empty_help: "Essaie de changer le mode, enlever les favoris, ou supprimer le filtre.",
+
+    // cards
+    open: "Ouvrir",
+    fav: "Favori",
+
+    // modal
+    steps: "Étapes",
+    low: "🌥 Low battery :",
+    stop: "🔥 Stop si :",
+    note: "✨ Note :",
+    start_timer: "⏱ Lancer le timer",
+
+    // timer
+    ready: "Ready?",
+    inhale: "Inspire…",
+    exhale: "Expire…",
+    done: "Terminé 🌿",
+    start: "Démarrer"
+  },
+
+  en: {
+    brand_title: "Toolbox",
+
+    favs: "★ Favorites",
+    theme_dark: "🌙 Dark mode",
+    theme_light: "☀️ Light mode",
+    reset: "↺ Reset",
+    search_placeholder: "Search a tool…",
+
+    hero_title: "Your regulation sanctuary",
+    hero_subtitle: "Gentle tools to calm your nervous system, pain, and energy.",
+    breath2min: "🌬 Breathing 2 min",
+    random_tool: "🎲 Random tool",
+
+    active_filter: "Active filter:",
+    none: "None",
+
+    empty_title: "No results",
+    empty_help: "Try changing the mode, turning off favorites, or clearing the filter.",
+
+    open: "Open",
+    fav: "Favorite",
+
+    steps: "Steps",
+    low: "🌥 Low battery:",
+    stop: "🔥 Stop if:",
+    note: "✨ Note:",
+    start_timer: "⏱ Start timer",
+
+    ready: "Ready?",
+    inhale: "Inhale…",
+    exhale: "Exhale…",
+    done: "All done 🌿",
+    start: "Start"
+  }
+};
+
+function t(key){
+  const lang = state.lang || LANG_FR;
+  return (I18N[lang] && I18N[lang][key]) || I18N.fr[key] || key;
+}
+
+function applyLangToStaticHtml(){
+  // 1) lang attr
+  document.documentElement.setAttribute("lang", state.lang || LANG_FR);
+
+  // 2) éléments texte : [data-i18n="..."]
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const k = el.getAttribute("data-i18n");
+    if(!k) return;
+    el.textContent = t(k);
+  });
+   
+  // 3) placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const k = el.getAttribute("data-i18n-placeholder");
+    if(k === "nav.search.placeholder"){
+      el.setAttribute("placeholder", t("search_placeholder"));
+    }
+  });
+
+  // 4) textes “connus” (ceux que tu as en dur dans HTML sans data-i18n partout)
+  // -> on cible par ID, stable et sûr :
+  const brandStrong = document.querySelector(".brand-title strong");
+  if(brandStrong) brandStrong.textContent = t("brand_title");
+
+  const heroH1 = document.querySelector(".hero h1");
+  if(heroH1) heroH1.textContent = t("hero_title");
+
+  const heroP = document.querySelector(".hero p");
+  if(heroP) heroP.textContent = t("hero_subtitle");
+
+  if(breath2min) breath2min.textContent = t("breath2min");
+  if(randomTool) randomTool.textContent = t("random_tool");
+
+  // search
+  if(searchInput) searchInput.setAttribute("placeholder", t("search_placeholder"));
+}
+
+function setLang(next){
+  state.lang = (next === LANG_EN) ? LANG_EN : LANG_FR;
+  try{ localStorage.setItem(LS_LANG, state.lang); }catch(e){}
+
+  // bouton lang
+  if(langBtn){
+    const isEn = state.lang === LANG_EN;
+    langBtn.setAttribute("aria-pressed", isEn ? "true" : "false");
+    langBtn.textContent = isEn ? "FR" : "EN"; // bouton affiche l'autre langue
+  }
+
+  applyLangToStaticHtml();
+  updateThemeButton();
+  render();
+}
+
+function loadLang(){
+  try{
+    const saved = localStorage.getItem(LS_LANG);
+    setLang(saved === LANG_EN ? LANG_EN : LANG_FR);
+  }catch(e){
+    setLang(LANG_FR);
+  }
+}
+
 
 // -------------------------
 // Favorites
@@ -511,10 +668,9 @@ function updateThemeButton(){
   if(!themeBtn) return;
   const isDark = currentTheme() === THEME_DARK;
 
-  // Quand on est en dark, on propose "Jour" (soleil)
-  themeBtn.textContent = isDark ? "☀️ Mode jour" : "🌙 Mode nuit";
+  themeBtn.textContent = isDark ? t("theme_light") : t("theme_dark");
   themeBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
-  themeBtn.setAttribute("title", isDark ? "Passer en mode jour" : "Passer en mode nuit");
+  themeBtn.setAttribute("title", isDark ? "Switch to day mode" : "Switch to night mode");
 }
 
 function applyTheme(theme){
@@ -596,25 +752,25 @@ function render(){
   if(!grid) return;
 
   if(favCount) favCount.textContent = String(state.favorites.size);
-  if(activeFilter) activeFilter.textContent = state.filter ? state.filter : "Aucun";
+  if(activeFilter) activeFilter.textContent = state.filter ? state.filter : t("none");
 
   const items = getFilteredTools();
   grid.innerHTML = "";
 
   if(items.length === 0){
-    grid.innerHTML = `
-      <article class="card">
-        <h3>Aucun résultat</h3>
-        <p>Essaie de changer le mode, enlever les favoris, ou supprimer le filtre.</p>
-        <div class="hero-actions">
-          <button class="btn" id="emptyReset">↺ Réinitialiser</button>
-        </div>
-      </article>
-    `;
-    const btn = document.getElementById("emptyReset");
-    if(btn && clearFiltersBtn) btn.addEventListener("click", () => clearFiltersBtn.click());
-    return;
-  }
+  grid.innerHTML = `
+    <article class="card">
+      <h3>${escapeHtml(t("empty_title"))}</h3>
+      <p>${escapeHtml(t("empty_help"))}</p>
+      <div class="hero-actions">
+        <button class="btn" id="emptyReset">↺ ${escapeHtml(t("reset"))}</button>
+      </div>
+    </article>
+  `;
+  const btn = document.getElementById("emptyReset");
+  if(btn && clearFiltersBtn) btn.addEventListener("click", () => clearFiltersBtn.click());
+  return;
+}
 
   items.forEach(tool => {
     const isFav = state.favorites.has(tool.id);
@@ -662,9 +818,10 @@ function render(){
       </div>
 
       <div class="hero-actions" style="justify-content:flex-start; margin-top:14px;">
-        <button class="btn small" data-open="${escapeHtml(tool.id)}">Ouvrir</button>
+        <button class="btn small" data-open="${escapeHtml(tool.id)}">${escapeHtml(t("open"))}</button>
+
         <button class="btn small ghost" data-fav="${escapeHtml(tool.id)}" aria-pressed="${isFav ? "true":"false"}">
-          ${isFav ? "★" : "☆"} Favori
+        ${isFav ? "★" : "☆"} ${escapeHtml(t("fav"))}
         </button>
       </div>
     `;
@@ -708,20 +865,20 @@ function openTool(id){
 
   if(modalBody){
     modalBody.innerHTML = `
-      <h4>Étapes</h4>
-      <ul>${steps}</ul>
-      <p><strong>🌥 Low battery :</strong> ${escapeHtml(tool.low || "—")}</p>
-      <p><strong>🔥 Stop si :</strong> ${escapeHtml(tool.stop || "—")}</p>
-      <p><strong>✨ Note :</strong> ${escapeHtml(tool.note || "—")}</p>
-    `;
+     <h4>${escapeHtml(t("steps"))}</h4>
+        <ul>${steps}</ul>
+           <p><strong>${escapeHtml(t("low"))}</strong> ${escapeHtml(tool.low || "—")}</p>
+           <p><strong>${escapeHtml(t("stop"))}</strong> ${escapeHtml(tool.stop || "—")}</p>
+           <p><strong>${escapeHtml(t("note"))}</strong> ${escapeHtml(tool.note || "—")}</p>
+`      ;
 
     // 👉 AJOUT DU TIMER SI L'OUTIL EN A UN
     if(tool.timer){
       modalBody.innerHTML += `
         <div style="margin-top:16px;">
           <button class="btn" id="startToolTimer" type="button">
-            ⏱ Lancer le timer
-          </button>
+           ${escapeHtml(t("start_timer"))}
+           </button>
         </div>
       `;
 
@@ -887,7 +1044,7 @@ function btStopAll(){
     breathOrb.style.setProperty("--orb-scale", String(ORB_MIN_SCALE));
   }
 
-  if(btPhase) btPhase.textContent = "Prête.";
+  if(btPhase) btPhase.textContent = t("ready");
   if(btCount) btCount.textContent = "";
 
   if(noiseGain && audioCtx){
@@ -965,7 +1122,7 @@ function btStartRun(){
       : ((t - inhaleMs) / exhaleMs);
 
     if(btPhase){
-      btPhase.textContent = (phase === "inhale") ? "Inspire…" : "Expire…";
+      btPhase.textContent = (phase === "inhale") ? t("inhale") : t("exhale");
     }
 
     const scale = (phase === "inhale")
@@ -990,7 +1147,7 @@ function btStartRun(){
 
     if(btLeft <= 0){
       btStopAll();
-      if(btPhase) btPhase.textContent = "Terminé 🌿";
+      if(btPhase) btPhase.textContent = t("done");
     }
   }, 1000);
 }
@@ -1083,6 +1240,14 @@ function setupEvents(){
       saveTheme(next === "dark" ? "dark" : "light");
     });
   }
+
+  // Language toggle
+  if(langBtn){
+    langBtn.addEventListener("click", () => {
+      const next = (state.lang === LANG_EN) ? LANG_FR : LANG_EN;
+      setLang(next);
+     });
+  } 
 
   // Tool modal close
   if(closeModal && toolModal){
@@ -1180,9 +1345,10 @@ function setupStickyHeaderNav(){
 // -------------------------
 // Init
 // -------------------------
-function init(){
+ffunction init(){
   loadFavorites();
   loadTheme();
+  loadLang();
   setupEvents();
   setupStickyHeaderNav(); 
   render();
