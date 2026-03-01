@@ -80,8 +80,8 @@ const TOOLS = [
    i18n: {
     en: {
       title: "Contract-Relax",
-      category: "Exercices",
-      position: "seated/lying down",
+      category: "Exercises",
+      position: "sitting/lying down",
       intensity: "very gentle",
       summary: "Release tension without forcing it, by alternating light contraction and relaxation.",
       steps: [
@@ -89,7 +89,7 @@ const TOOLS = [
         "Contract very slightly (hands/shoulders) for 3 seconds.",
         "Exhale fully, relax completely.",
         "Pause for 10 seconds.",
-        "Repeat 5 times.",
+        "Repeat 5 times."
       ],
       low: "Low battery version: contract only the hands.",
       stop: "Stop if you experience unusual joint pain, dizziness, or muscle tension.",
@@ -116,7 +116,27 @@ const TOOLS = [
     ],
     low: "Version low battery : uniquement poignets + chevilles.",
     stop: "Stop si instabilité, douleur vive, pincement.",
-    note: "Petit mouvement = grand signal de sécurité."
+    note: "Petit mouvement = grand signal de sécurité.",
+
+   i18n: {
+    en: {
+      title: "Gentle mobilisation",
+      category: "Exercises",
+      position: "sitting/standing",
+      intensity: "gentle",
+      summary: "Awaken the body like a cat: micro-circles, minimal amplitude, slow breathing.",
+      steps: [
+        "Shoulder circles (small) - 6 times.",
+        "Very small neck rotations (without going all the way) - 4 times.",
+        "Wrist/ankle circles - 6 times.",
+        "Balance of weight from one foot to the other - 8 times.",
+        "Finish with 3 long exhalations."
+      ],
+      low: "Low battery version: only wrists and ankles.",
+      stop: "Stop if you experience instability, sharp pain, or pinching.",
+      note: "Small movement = big safety signal."
+    }
+  }  
   },
   {
     id: "etirements-doux",
@@ -136,7 +156,26 @@ const TOOLS = [
     ],
     low: "Version low battery : auto-étreinte + 3 respirations.",
     stop: "Stop si hyperlaxité qui “tire trop”, douleur articulaire.",
-    note: "Ton corps n’est pas un projet. C’est un vivant."
+    note: "Ton corps n’est pas un projet. C’est un vivant.",
+
+   i18n: {
+    en: {
+      title: "Gentle stretches",
+      category: "Exercises",
+      position: "sitting",
+      intensity: "very gentle",
+      summary: "Non-performative stretching: the focus is on comfort, not range of motion.",
+      steps: [
+        "Seated side stretch (very light) 2 breaths on each side.",
+        "Chest opening (hands behind head, elbows open) 3 breaths.",
+        "Self-hugging (forearm against forearm) 4 breaths.",
+        "End: hands on stomach, long exhalation."
+      ],
+      low: "Low battery version: self-hugging + 3 deep breaths.",
+      stop: "Stop if hypermobility causes "too much pulling" or joint pain.",
+      note: "Your body is not a project. It is a living being."
+    }
+  }  
   },
   {
     id: "orientation",
@@ -156,7 +195,26 @@ const TOOLS = [
     ],
     low: "Version low battery : 3 objets + 1 expiration longue.",
     stop: "Stop si ça augmente l’anxiété : fais uniquement l’expiration longue.",
-    note: "Tu n’as rien à prouver. Tu te retrouves."
+    note: "Tu n’as rien à prouver. Tu te retrouves.",
+
+   i18n: {
+    en: {
+      title: "Orientation",
+      category: "Somatic",
+      position: "sitting/standing",
+      intensity: "very gentle",
+      summary: "Returning to the present through the eyes, seeking the neutral/pleasant.",
+      steps: [
+        "Look at 5 objects around you, slowly.",
+        "Name 3 colours you can see.",
+        "Find 1 pleasant detail (texture/light).",
+        "Place a hand on your heart, exhale slowly."
+      ],
+      low: "Low battery version: 3 objects + 1 long exhalation.",
+      stop: "Stop if it increases anxiety: just do the long exhalation.",
+      note: "You have nothing to prove. You're finding yourself."
+    }
+  }   
   },
   {
     id: "ancrage5sens",
@@ -169,15 +227,35 @@ const TOOLS = [
     modes: ["fatigue_mentale","fatigue_emo","sos"],
     summary: "Revenir en pleine conscience en activant les 5 sens.",
     steps: [
-      "5. Repère 5 choses que tu peux voir.",
-      "4. Repère 4 choses que tu peux toucher.",
-      "3. Repère 3 choses que tu peux entendre.",
-      "2. Capte 2 odeurs que tu peux sentir.",
-      "1. Savoure 1 chose que tu peux goûter."
+      "Repère 5 choses que tu peux voir.",
+      "Repère 4 choses que tu peux toucher.",
+      "Repère 3 choses que tu peux entendre.",
+      "Capte 2 senteurs que tu peux sentir.",
+      "Savoure 1 chose que tu peux goûter."
     ],
     low: "Version low battery : 3 objets + 1 expiration longue.",
     stop: "Stop si ça augmente l’anxiété : fais uniquement l’expiration longue.",
-    note: "Tu n’as rien à prouver. Tu te retrouves."
+    note: "Tu n’as rien à prouver. Tu te retrouves.",
+
+   i18n: {
+    en: {
+      title: "Anchoring the 5 senses",
+      category: "Somatic",
+      position: "sitting/standing",
+      intensity: "very gentle",
+      summary: "Returning to full awareness by activating the 5 senses.",
+      steps: [
+        "Identify 5 things you can see.",
+        "Identify 4 things you can touch.",
+        "Identify 3 things you can hear.",
+        "Identify 2 scents that you can smell.",
+        "Savour 1 thing you can taste." 
+      ],
+      low: "Low battery version: 3 objects + 1 long exhalation.",
+      stop: "Stop if it increases anxiety: just do the long exhalation.",
+      note: "You are safe. Your body is a safe place."
+    }
+  }  
   }, 
   {
     id: "auto-contact",
@@ -197,7 +275,26 @@ const TOOLS = [
     ],
     low: "Version low battery : une main sur le cœur + 2 expirations.",
     stop: "Stop si le contact te met mal à l’aise : main sur la cuisse.",
-    note: "Sécurité d’abord. Toujours."
+    note: "Sécurité d’abord. Toujours.",
+
+   i18n: {
+    en: {
+      title: "Self-soothing touch",
+      category: "Somatic",
+      position: "sitting/lying down",
+      intensity: "very gentle",
+      summary: "Touch as a safety signal: palms + gentle pressure + long exhalations.",
+      steps: [
+        "One hand on the heart, one on the stomach.",
+        "Very gentle pressure (like a blanket).",
+        "3 long exhalations.",
+        "Option: light tapping on the arms." 
+      ],
+      low: "Low battery version: a hand on the heart + 2 exhalations.",
+      stop: "Stop if the contact makes you uncomfortable: hand on thigh.",
+      note: "Safety first. Always."
+    }
+  }   
   },
   {
     id: "pendulation",
@@ -213,12 +310,32 @@ const TOOLS = [
       "Choisis une zone neutre (main, pieds) = Zone A.",
       "Choisis une zone tendue (nuque, mâchoire) = Zone B.",
       "Observe 10 sec la Zone A (respire).",
-      "Observe 5 sec la Zone B (sans plonger).",
+      "Observe 5 sec la Zone B (sans se laisser envahir).",
       "Retour Zone A. Répète 5 fois."
     ],
     low: "Version low battery : 2 allers-retours seulement.",
     stop: "Stop si la Zone B déclenche panique : reste sur Zone A.",
-    note: "On dose. On n’envahit pas."
+    note: "On dose. On n’envahit pas.",
+
+     i18n: {
+       en: {
+         title: "Pendulation",
+         category: "Somatic",
+         position: "sitting",
+         intensity: "gentle",
+         summary: "Moving back and forth between an OK zone and a tense zone to help the system not to freeze up.",
+         steps: [
+           "Choose a neutral zone (hand, feet) = Zone A.",
+           "Choose a tense area (neck, jaw) = Zone B.",
+           "Observe Zone A for 10 seconds (breathe).",
+           "Observe Zone B for 5 seconds (without getting pulled in).",
+           "Go back to Zone A. Repeat 5 times." 
+         ],
+         low: "Low battery version: 2 times only.",
+         stop: "Stop if Zone B triggers panic: stay in Zone A.",
+         note: "We measure it out. We don't overdo it."
+       }
+     }   
   },
   {
     id: "coherence",
@@ -230,14 +347,31 @@ const TOOLS = [
     position: "assis/allongé",
     intensity: "très doux",
     modes: ["ok","fatigue_mentale","fatigue_emo","fatigue_phys","douleurs","sos"],
-    summary: "Respiration régulière : inspire 4, expire 6 (adaptable).",
+    summary: "Respiration régulière : inspire 5 secondes, expire 5 secondes.",
     steps: [
       "Inspire par le nez 5 secondes.",
       "Expire 5 secondes"
     ],
     low: "Version low battery : 5 cycles.",
     stop: "Stop si essoufflement : respiration naturelle + expirations longues.",
-    note: "L’expiration longue est souvent la clé."
+    note: "Pas besoin de forcer, le rythme vient naturellement.",
+
+     i18n: {
+       en: {
+         title: "Heart coherence",
+         category: "Breathing",
+         position: "sitting/lying down",
+         intensity: "very gentle",
+         summary: "Regular breathing: inhale for 5 seconds, exhale for 5 seconds.",
+         steps: [
+           "Inhale through your nose for 5 seconds.",
+           "Exhale for 5 seconds." 
+         ],
+         low: "Low battery version: 5 rounds.",
+         stop: "Stop if short of breath: natural breathing + long exhalations.",
+         note: "No need to force it, pacing will come naturally."
+       }
+     }  
   }, 
   {
     id: "soupir",
@@ -257,7 +391,26 @@ const TOOLS = [
     ],
     low: "Version low battery : 1 seule fois.",
     stop: "Stop si vertige : fais une expiration longue simple.",
-    note: "Mini reset quand tout déborde."
+    note: "Mini reset quand tout déborde.",
+
+      i18n: {
+       en: {
+         title: "Physiological sigh",
+         category: "Breathing",
+         position: "sitting/standing",
+         intensity: "very gentle",
+         summary: "Quick reset: two short breaths + one long exhale.",
+         steps: [
+           "Inhale normally.",
+           "Re-inhale a little "complement".",
+           "Exhale very slowly with your mouth.",
+           "Repeat 3 times." 
+         ],
+         low: "Low battery version: just 1 time.",
+         stop: "Stop if you feel dizzy: take a simple, long exhalation.",
+         note: "Mini reset when everything is overwhelming."
+       }
+     } 
   },
   {
     id: "check-energie",
@@ -273,12 +426,30 @@ const TOOLS = [
       "Énergie 0–10 ?",
       "Douleur 0–10 ?",
       "1 besoin vital (eau / manger / repos) ?",
-      "1 chose douce ?",
       "Choisis 1 micro-action."
     ],
     low: "Version low battery : énergie + 1 micro-action.",
     stop: "Si ça stresse : remplace par ‘je bois un verre d’eau’.",
-    note: "Tu ajustes. Tu ne t’arraches pas."
+    note: "Tu ajustes. Tu ne t’arraches pas.",
+
+     i18n: {
+       en: {
+         title: "Energy check",
+         category: "Pacing",
+         position: "sitting",
+         intensity: "very gentle",
+         summary: "A gentle check-in: energy, pain, and essential needs.",
+         steps: [
+           "Energy 0-10?",
+           "Pain 0-10?",
+           "1 essential need (water / food / rest)?",  
+           "Choose 1 minor action." 
+         ],
+         low: "Low battery version: energy + 1 minor action.",
+         stop: "If it's stressful: replace it with 'I'm drinking a glass of water'.",
+         note: "You adjust. You don't tear yourself apart."
+       }
+     } 
   },
   {
     id: "mvd",
@@ -291,14 +462,33 @@ const TOOLS = [
     modes: ["fatigue_phys","fatigue_mentale","fatigue_emo","douleurs","sos"],
     summary: "Construire une journée “minimum vital” pour arrêter de se battre contre soi.",
     steps: [
-      "3 besoins : eau / manger / repos (choisis 1).",
-      "1 tâche mini : 5 minutes max.",
-      "1 récup : respiration/sieste/poser le corps.",
+      "3 besoins: eau / manger / repos (choisis 1).",
+      "1 mini tâche: 5 minutes max.",
+      "1 récup: respiration/sieste/poser le corps.",
       "Tout le reste = bonus."
     ],
     low: "Version low battery : eau + repos.",
     stop: "Stop si honte : ‘aujourd’hui je me protège’.",
-    note: "Minimum vital = victoire."
+    note: "Minimum vital = victoire.",
+
+     i18n: {
+       en: {
+         title: "Vital minimum",
+         category: "Pacing",
+         position: "sitting",
+         intensity: "very gentle",
+         summary: "Build a "vital minimum" day to stop fighting against yourself.",
+         steps: [
+           "3 needs: water / food / rest (choose 1).",
+           "1 mini task: 5 minutes max.",
+           "1 recovery: breathing/nap/resting the body.",  
+           "Anything else = bonus." 
+         ],
+         low: "Low battery version: water + rest.",
+         stop: "If you're feeling ashamed, say this: 'Today I'm protecting myself'.",
+         note: "Vital minimum = victory."
+       }
+     } 
   },
   {
     id: "nuque",
@@ -312,13 +502,30 @@ const TOOLS = [
     summary: "Protocole doux : chaleur + respiration + relâchement de mâchoire.",
     steps: [
       "Chaleur à la base du crâne (si ok).",
-      "Expire longuement 6 fois.",
-      "Relâche la langue (elle se décolle du palais).",
-      "Option : auto-contact mains sur nuque."
+      "Respire longuement 6 fois.",
+      "Relâche la langue (elle se décolle du palais)."
     ],
-    low: "Version low battery : chaleur + 3 expirations.",
+    low: "Version low battery : chaleur + 3 respirations.",
     stop: "Stop si chaleur impossible : remplace par mains tièdes sur nuque.",
-    note: "Tu ne combats pas. Tu apaises."
+    note: "Tu ne combats pas. Tu apaises.",
+
+     i18n: {
+       en: {
+         title: "Neck - base of skull",
+         category: "Pain",
+         position: "sitting/lying down",
+         intensity: "very gentle",
+         summary: "Gentle protocol: warmth + breathing + jaw relaxation.",
+         steps: [
+           "Warmth at the base of the skull (if ok).",
+           "Breathe in and out slowly 6 times.",
+           "Relax your tongue (detach it from the palate)."
+         ],
+         low: "Low battery version: warmth + 3 breaths.",
+         stop: "Stop if warmth is too much: replace with warm hands on the back of the neck.",
+         note: "You don't fight. You soothe."
+       }
+     }
   },
   {
     id: "machoire",
@@ -331,14 +538,33 @@ const TOOLS = [
     modes: ["fatigue_phys","fatigue_mentale","douleurs","sos"],
     summary: "Décharger la mâchoire sans étirer fort.",
     steps: [
-      "Lèvres fermées, dents séparées.",
+      "Lèvres fermées, mâchoires desserrées.",
       "Langue au repos (bas de bouche).",
       "Mini ‘oui/non’ (très petit).",
       "2 soupirs physiologiques."
     ],
-    low: "Version low battery : dents séparées + 1 soupir.",
+    low: "Version low battery : mâchoires desserrées + 1 soupir.",
     stop: "Stop si douleur trijumeau : uniquement respiration + dents séparées.",
-    note: "La mâchoire peut être une armure. On l’invite à lâcher."
+    note: "La mâchoire peut être une armure. On l’invite à lâcher.",
+
+     i18n: {
+       en: {
+         title: "Jaws — soft unlocking",
+         category: "Pain",
+         position: "sitting",
+         intensity: "very gentle",
+         summary: "Release tension in the jaws without stretching too hard.",
+         steps: [
+           "Lips closed, jaws unclenched.",
+           "Tongue at rest (lower part of the mouth).",
+           "Mini ‘yes/no’ (very small).",
+           "2 physiological sighs." 
+         ],
+         low: "Low battery version: unclenched jaws + 1 sigh.",
+         stop: "Stop if trigeminal pain: only breathing + unclenched jaws.",
+         note: "Jaws can be like a shield. We invite them to let go."
+       }
+     }
   },
   {
     id: "rouleau-picots",
@@ -352,15 +578,36 @@ const TOOLS = [
     summary: "Décompression + fascia : on dose pour éviter l’habituation (pas tous les jours).",
     steps: [
       "Pose-toi sur le rouleau (haut/milieu du dos), bassin relevé, mains derrière la tête en soutien.",
-      "Micro-roule très lentement (amplitude mini) 60–90 sec.",
+      "Micro-roule très lentement (amplitude mini) 20–30 sec.",
       "Trouve un point de tension et reste dessus, repose le bassin au sol sans trop cambrer.",  
       "Inspire en écartant les coudes et en abaissant le haut du dos vers le sol.",
       "Expire en remontant, sans forcer. C'est OK si tu entends des 'cracs', c'est que les tensions se relâchent.", 
       "Répète 3 fois pour chaque point douloureux."
     ],
-    low: "Version low battery : 2 minutes en roulant doucement + respiration.",
+    low: "Version low battery : 1 minute en roulant doucement + respiration.",
     stop: "Stop si douleur vive, engourdissement, pincement nerveux.",
-    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue)."
+    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue).",
+
+     i18n: {
+       en: {
+         title: "Spiky roll - upper back",
+         category: "Pain",
+         position: "lying down",
+         intensity: "very gentle",
+         summary: "Decompression + fascia: don't use every day to avoid habituation.",
+         steps: [
+           "Lay down on the spiky roll (upper/middle back), pelvis raised, hands behind your head for support.",
+           "Micro-roll very slowly (minimum amplitude) 20–30 sec.",
+           "Find a tension spot and stay on it, rest your pelvis on the ground without arching your back too much.",
+           "Inhale while openning your elbows and lowering your upper back towards the floor.",
+           "Exhale as you rise, without forcing it. It's OK if you hear 'cracks', it means the tension is being released.",
+           "Repeat 3 times for each tension spot." 
+         ],
+         low: "Low battery version: 1 minute of micro-roll + breathing.",
+         stop: "Stop if you experience sharp pain, numbness, or nerve pinching.",
+         note: "Not every day: allow the body time to integrate (otherwise it gets used to it)." 
+       }
+     }
   },
   {
     id: "rouleau-picots-nuque",
@@ -382,29 +629,69 @@ const TOOLS = [
     ],
     low: "Version low battery : 1 minute en tourant la tête doucement d'un côté à l'autre + respiration.",
     stop: "Stop si douleur vive, engourdissement, pincement nerveux.",
-    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue)."
+    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue).",
+
+     i18n: {
+       en: {
+         title: "Spiky roll - neck",
+         category: "Pain",
+         position: "lying down",
+         intensity: "gentle to moderate",
+         summary: "Decompression + fascia: don't use every day to avoid habituation.",
+         steps: [
+           "Place the spiky roll under your neck, with your body flat on the floor and your arms at your sides.",
+           "Turn your head from left to right, then from right to left, very slowly for 20 seconds.",
+           "Don't forget to breath!",
+           "Find a tension spot and stay on it.",
+           "While remaining on the tension spot, move your head up and down. Use your eyes to help, by looking up, then down.",
+           "Repeat 6 times for each tension spot." 
+         ],
+         low: "Low battery version: 1 minute gently turning your head from side to side + breathing.",
+         stop: "Stop if you experience sharp pain, numbness, or nerve pinching.",
+         note: "Not every day: allow the body time to integrate (otherwise it gets used to it)." 
+       }
+     }
   }, 
   {
     id: "balle-fascia-trapeze",
-    title: "Balle fascia derrière le trapèze",
+    title: "Balle fascia - trapèze",
     category: "Douleur",
     tags: ["Balle fascia", "Balle", "trapèze", "épaule", "fascia", "nuque"],
     duration: "2–6 min",
     position: "allongé",
-    intensity: "doux",
+    intensity: "doux à modéré",
     modes: ["ok","fatigue_phys","douleurs","sos"],
-    summary: "Déverrouillage doux : pression + mouvement du bras (6x mini).",
+    summary: "Déverrouillage doux : pression + mouvement du bras.",
     steps: [
       "Allonge-toi sur le dos.",
       "Place la balle derrière le trapèze (pas sur l’os).",
-      "Trouve un point ‘oui’ tolérable (pas ‘aïe’).",
       "Lève le bras du côté concerné en inspirant, puis abaisse-le lentement (≥ 6 fois).",
       "Expiration longue sur la descente.",
-      "Fin : micro-cercles d’épaule 3 fois."
+      "Termine avec 3 micro-cercles d’épaule."
     ],
     low: "Version low battery : balle en place + 3 expirations longues.",
     stop: "Stop si fourmillements, douleur nerveuse, douleur aiguë, vertige.",
-    note: "C’est la lenteur qui fait le travail. On n’attaque pas le point."
+    note: "C’est la lenteur qui fait le travail. On n’attaque pas le point.",
+
+     i18n: {
+       en: {
+         title: "Fascia ball - trapezius",
+         category: "Pain",
+         position: "lying down",
+         intensity: "gentle to moderate",
+         summary: "Soft unlocking: pressure + arm movement.",
+         steps: [
+           "Lie down on your back.",
+           "Place the ball behind the trapezius at the tension spot (not on the bone).",
+           "Raise the arm on the affected side while inhaling, then lower it slowly (≥ 6 times).",
+           "Long exhalation on the descent.",
+           "Finish with 3 gentle shoulder circles." 
+         ],
+         low: "Low battery version: ball in place + 3 long exhalations.",
+         stop: "Stop if you experience tingling, nerve pain, acute pain, or dizziness.",
+         note: "It's the slowness that does the work. We don't attack the tension spot." 
+       }
+     }
   },
    {
     id: "dance-party",
@@ -424,9 +711,30 @@ const TOOLS = [
       "Sens comme la détente s'étend sur toi",
       "Fin : Secoue les bras et les jambes."
     ],
-    low: "Version low battery : Juste écouter la musique et se balancer tranquillement",
+    low: "Version low battery : juste écouter la musique et se balancer tranquillement.",
     stop: "Stop si fourmillements, douleur nerveuse, douleur aiguë, vertige.",
-    note: "C’est le mouvement et la joie qui font le travail."
+    note: "C’est le mouvement et la joie qui font le travail.",
+
+      i18n: {
+       en: {
+         title: "Dance party",
+         category: "Somatic",
+         position: "standing",
+         intensity: "gentle",
+         summary: "Danse, move, feel your body.",
+         steps: [
+            "Put on some music that makes you want to move.",
+            "Dance however you like.",
+            "Avoid sudden movements.",
+            "Let your body express itself to the rhythm of the music.",
+            "Feel the relaxation spreading over you.",
+            "Finish by shaking your arms and legs."
+         ],
+         low: "Low battery version: just listen to the music and sway gently.",
+         stop: "Stop if you experience tingling, nerve pain, acute pain, or dizziness.",
+         note: "It is movement and joy that do the work." 
+       }
+     }
   }
 ];
 
