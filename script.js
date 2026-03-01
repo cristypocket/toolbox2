@@ -85,11 +85,11 @@ const TOOLS = [
       intensity: "very gentle",
       summary: "Release tension without forcing it, by alternating light contraction and relaxation.",
       steps: [
-        "Inhale gently."
-        "Contract very slightly (hands/shoulders) for 3 seconds."
-        "Exhale fully, relax completely."
-        "Pause for 10 seconds."
-        "Repeat 5 times."
+        "Inhale gently.",
+        "Contract very slightly (hands/shoulders) for 3 seconds.",
+        "Exhale fully, relax completely.",
+        "Pause for 10 seconds.",
+        "Repeat 5 times.",
       ],
       low: "Low battery version: contract only the hands.",
       stop: "Stop if you experience unusual joint pain, dizziness, or muscle tension.",
