@@ -1341,7 +1341,7 @@ function openTool(id){
         const btn = document.getElementById("startToolTimer");
         if(btn){
           btn.addEventListener("click", () => {
-            openBreathTimer({ ...tool.timer, sound: false });
+            openBreathTimer({ ...tool.timer, sound: true });
           });
         }
       }, 0);
