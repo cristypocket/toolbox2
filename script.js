@@ -558,7 +558,7 @@ const I18N = {
     hero_title: "Ton sanctuaire de régulation",
     hero_subtitle: "Des outils doux pour apaiser le système nerveux, la douleur et l’énergie.",
     breath2min: "🌬 Respiration 2 min",
-    random: "🎲 Outil aléatoire",
+    random_tool: "🎲 Outil aléatoire",
      
     // modes FR
     "modes.title": "Mon état du moment...",
@@ -639,7 +639,7 @@ const I18N = {
     hero_title: "Your regulation sanctuary",
     hero_subtitle: "Gentle tools to calm your nervous system, pain, and energy.",
     breath2min: "🌬 Breathing 2 min",
-    random: "🎲 Random tool",
+    random_tool: "🎲 Random tool",
 
     // modes EN
     "modes.title": "How do you feel right now…",
