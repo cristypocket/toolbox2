@@ -555,18 +555,18 @@ const I18N = {
     "nav.filters.fasciaBall":"Balle fascia",
      
     // hero FR
-    "hero.title": "Ton sanctuaire de régulation",
-    "hero.subtitle": "Des outils doux pour apaiser le système nerveux, la douleur et l’énergie.",
-    "hero.actions.breath2min": "🌬 Respiration 2 min",
-    "hero.actions.random": "🎲 Outil aléatoire",
+    hero_title: "Ton sanctuaire de régulation",
+    hero_subtitle: "Des outils doux pour apaiser le système nerveux, la douleur et l’énergie.",
+    breath2min: "🌬 Respiration 2 min",
+    random: "🎲 Outil aléatoire",
      
     // modes FR
     "modes.title": "Mon état du moment...",
     "modes.ok": "🌿 OK",
-    "modes.fatiguePhy": "🫩 Fatigue physique",
+    "modes.fatiguePhys": "🫩 Fatigue physique",
     "modes.fatigueMental": "🤯 Fatigue mental",
     "modes.fatigueEmo": "🥺 Fatigue émotionnelle",
-    "modes.ache": "😬 Courbatures",
+    "modes.aches": "😬 Courbatures",
     "modes.pain": "😣 Douleurs",
     "modes.sos": "🔥 SOS", 
      
@@ -588,6 +588,7 @@ const I18N = {
     stop: "🔥 Stop si :",
     note: "✨ Note :",
     start_timer: "⏱ Lancer le timer",
+    "timer.title": "🌬 Timer respiration", 
 
     // timer FR
     ready: "Ready?",
@@ -635,18 +636,18 @@ const I18N = {
     "nav.filters.fasciaBall":"Fascia ball", 
 
     // hero EN
-    "hero.title": "Your regulation sanctuary",
-    "hero.subtitle": "Gentle tools to calm your nervous system, pain, and energy.",
-    "hero.actions.breath2min": "🌬 Breathing 2 min",
-    "hero.actions.random": "🎲 Random tool",
+    hero_title: "Your regulation sanctuary",
+    hero_subtitle: "Gentle tools to calm your nervous system, pain, and energy.",
+    breath2min: "🌬 Breathing 2 min",
+    random: "🎲 Random tool",
 
     // modes EN
     "modes.title": "How do you feel right now…",
     "modes.ok": "🌿 OK",
-    "modes.fatiguePhy": "🫩 Physical fatigue",
+    "modes.fatiguePhys": "🫩 Physical fatigue",
     "modes.fatigueMental": "🤯 Mental fatigue",
     "modes.fatigueEmo": "🥺 Emotional fatigue",
-    "modes.ache": "😬 Muscle aches",
+    "modes.aches": "😬 Muscle aches",
     "modes.pain": "😣 Pain",
     "modes.sos": "🔥 SOS", 
    
@@ -668,6 +669,7 @@ const I18N = {
     stop: "🔥 Stop if:",
     note: "✨ Note:",
     start_timer: "⏱ Start timer",
+    "timer.title": "🌬 Breathing timer", 
 
     // timer EN
     ready: "Ready?",
