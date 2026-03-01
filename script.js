@@ -106,7 +106,7 @@ const TOOLS = [
     position: "assis/debout",
     intensity: "doux",
     modes: ["ok","fatigue_phys","fatigue_mentale","courbatures"],
-    summary: "Réveiller le corps comme un chat : micro-cercles, amplitude mini, respiration lente.",
+    summary: "Réveiller le corps comme un chat: micro-cercles, amplitude mini, respiration lente.",
     steps: [
       "Cercles d’épaules (petits) x 6.",
       "Rotations de nuque très mini (sans aller au bout) x 4.",
@@ -147,15 +147,15 @@ const TOOLS = [
     position: "assis",
     intensity: "très doux",
     modes: ["ok","fatigue_phys","courbatures"],
-    summary: "Étirements non-performants : on cherche le confort, pas l’amplitude.",
+    summary: "Étirements non-performants: on cherche le confort, pas l’amplitude.",
     steps: [
       "Étirement latéral assis (très léger) 2 respirations de chaque côté.",
       "Ouverture poitrine (mains derrière la tête, coudes ouverts) 3 respirations.",
       "Auto-étreinte (avant-bras contre avant-bras) 4 respirations.",
       "Fin : mains sur ventre, expiration longue."
     ],
-    low: "Version low battery : auto-étreinte + 3 respirations.",
-    stop: "Stop si hyperlaxité qui “tire trop”, douleur articulaire.",
+    low: "Version low battery: auto-étreinte + 3 respirations.",
+    stop: "Stop si hyperlaxité qui 'tire trop', douleur articulaire.",
     note: "Ton corps n’est pas un projet. C’est un vivant.",
 
    i18n: {
@@ -172,7 +172,7 @@ const TOOLS = [
         "End: hands on stomach, long exhalation."
       ],
       low: "Low battery version: self-hugging + 3 deep breaths.",
-      stop: "Stop if hypermobility causes "too much pulling" or joint pain.",
+      stop: "Stop if hypermobility causes 'too much pulling' or joint pain.",
       note: "Your body is not a project. It is a living being."
     }
   }  
@@ -194,7 +194,7 @@ const TOOLS = [
       "Pose une main sur le cœur, expire longuement."
     ],
     low: "Version low battery : 3 objets + 1 expiration longue.",
-    stop: "Stop si ça augmente l’anxiété : fais uniquement l’expiration longue.",
+    stop: "Stop si ça augmente l’anxiété: fais uniquement l’expiration longue.",
     note: "Tu n’as rien à prouver. Tu te retrouves.",
 
    i18n: {
@@ -233,8 +233,8 @@ const TOOLS = [
       "Capte 2 senteurs que tu peux sentir.",
       "Savoure 1 chose que tu peux goûter."
     ],
-    low: "Version low battery : 3 objets + 1 expiration longue.",
-    stop: "Stop si ça augmente l’anxiété : fais uniquement l’expiration longue.",
+    low: "Version low battery: 3 objets + 1 expiration longue.",
+    stop: "Stop si ça augmente l’anxiété: fais uniquement l’expiration longue.",
     note: "Tu n’as rien à prouver. Tu te retrouves.",
 
    i18n: {
@@ -266,15 +266,15 @@ const TOOLS = [
     position: "assis/allongé",
     intensity: "très doux",
     modes: ["ok","fatigue_mentale","fatigue_emo","sos"],
-    summary: "Le toucher comme signal de sécurité : paumes + pression douce + expirations longues.",
+    summary: "Le toucher comme signal de sécurité: paumes + pression douce + expirations longues.",
     steps: [
       "Une main sur le cœur, une sur le ventre.",
       "Pression très douce (comme une couverture).",
       "3 expirations longues.",
       "Option : tapotements légers sur les bras."
     ],
-    low: "Version low battery : une main sur le cœur + 2 expirations.",
-    stop: "Stop si le contact te met mal à l’aise : main sur la cuisse.",
+    low: "Version low battery: une main sur le cœur + 2 expirations.",
+    stop: "Stop si le contact te met mal à l’aise: main sur la cuisse.",
     note: "Sécurité d’abord. Toujours.",
 
    i18n: {
@@ -313,8 +313,8 @@ const TOOLS = [
       "Observe 5 sec la Zone B (sans se laisser envahir).",
       "Retour Zone A. Répète 5 fois."
     ],
-    low: "Version low battery : 2 allers-retours seulement.",
-    stop: "Stop si la Zone B déclenche panique : reste sur Zone A.",
+    low: "Version low battery: 2 allers-retours seulement.",
+    stop: "Stop si la Zone B déclenche panique: reste sur Zone A.",
     note: "On dose. On n’envahit pas.",
 
      i18n: {
@@ -352,8 +352,8 @@ const TOOLS = [
       "Inspire par le nez 5 secondes.",
       "Expire 5 secondes"
     ],
-    low: "Version low battery : 5 cycles.",
-    stop: "Stop si essoufflement : respiration naturelle + expirations longues.",
+    low: "Version low battery: 5 cycles.",
+    stop: "Stop si essoufflement: respiration naturelle + expirations longues.",
     note: "Pas besoin de forcer, le rythme vient naturellement.",
 
      i18n: {
@@ -382,15 +382,15 @@ const TOOLS = [
     position: "assis/debout",
     intensity: "très doux",
     modes: ["fatigue_phys","fatigue_emo","fatigue_mentale","douleurs","sos"],
-    summary: "Reset rapide : deux petites inspirations + une longue expiration.",
+    summary: "Reset rapide: deux petites inspirations + une longue expiration.",
     steps: [
       "Inspire normalement.",
-      "Re-inspire un petit “complément”.",
+      "Re-inspire un petit 'complément'.",
       "Expire très longuement par la bouche.",
       "Répète 3 fois."
     ],
-    low: "Version low battery : 1 seule fois.",
-    stop: "Stop si vertige : fais une expiration longue simple.",
+    low: "Version low battery: 1 seule fois.",
+    stop: "Stop si vertige: fais une expiration longue simple.",
     note: "Mini reset quand tout déborde.",
 
       i18n: {
@@ -402,7 +402,7 @@ const TOOLS = [
          summary: "Quick reset: two short breaths + one long exhale.",
          steps: [
            "Inhale normally.",
-           "Re-inhale a little "complement".",
+           "Re-inhale a little 'complement'.",
            "Exhale very slowly with your mouth.",
            "Repeat 3 times." 
          ],
@@ -421,15 +421,15 @@ const TOOLS = [
     position: "assis",
     intensity: "très doux",
     modes: ["ok","fatigue_phys","fatigue_mentale","fatigue_emo","sos"],
-    summary: "Faire le point sans jugement : énergie, douleur, priorités vitales.",
+    summary: "Faire le point sans jugement: énergie, douleur, priorités vitales.",
     steps: [
       "Énergie 0–10 ?",
       "Douleur 0–10 ?",
       "1 besoin vital (eau / manger / repos) ?",
       "Choisis 1 micro-action."
     ],
-    low: "Version low battery : énergie + 1 micro-action.",
-    stop: "Si ça stresse : remplace par ‘je bois un verre d’eau’.",
+    low: "Version low battery: énergie + 1 micro-action.",
+    stop: "Si ça stresse: remplace par ‘je bois un verre d’eau’.",
     note: "Tu ajustes. Tu ne t’arraches pas.",
 
      i18n: {
@@ -460,15 +460,15 @@ const TOOLS = [
     position: "assis",
     intensity: "très doux",
     modes: ["fatigue_phys","fatigue_mentale","fatigue_emo","douleurs","sos"],
-    summary: "Construire une journée “minimum vital” pour arrêter de se battre contre soi.",
+    summary: "Construire une journée 'minimum vital' pour arrêter de se battre contre soi.",
     steps: [
-      "3 besoins: eau / manger / repos (choisis 1).",
+      "3 besoins: eau/manger/repos (choisis 1).",
       "1 mini tâche: 5 minutes max.",
       "1 récup: respiration/sieste/poser le corps.",
       "Tout le reste = bonus."
     ],
-    low: "Version low battery : eau + repos.",
-    stop: "Stop si honte : ‘aujourd’hui je me protège’.",
+    low: "Version low battery: eau + repos.",
+    stop: "Stop si honte: ‘aujourd’hui je me protège’.",
     note: "Minimum vital = victoire.",
 
      i18n: {
@@ -477,9 +477,9 @@ const TOOLS = [
          category: "Pacing",
          position: "sitting",
          intensity: "very gentle",
-         summary: "Build a "vital minimum" day to stop fighting against yourself.",
+         summary: "Build a 'vital minimum' day to stop fighting against yourself.",
          steps: [
-           "3 needs: water / food / rest (choose 1).",
+           "3 needs: water/food/rest (choose 1).",
            "1 mini task: 5 minutes max.",
            "1 recovery: breathing/nap/resting the body.",  
            "Anything else = bonus." 
@@ -499,14 +499,14 @@ const TOOLS = [
     position: "assis/allongé",
     intensity: "très doux",
     modes: ["fatigue_phys","douleurs","sos"],
-    summary: "Protocole doux : chaleur + respiration + relâchement de mâchoire.",
+    summary: "Protocole doux: chaleur + respiration + relâchement de mâchoire.",
     steps: [
       "Chaleur à la base du crâne (si ok).",
       "Respire longuement 6 fois.",
       "Relâche la langue (elle se décolle du palais)."
     ],
-    low: "Version low battery : chaleur + 3 respirations.",
-    stop: "Stop si chaleur impossible : remplace par mains tièdes sur nuque.",
+    low: "Version low battery: chaleur + 3 respirations.",
+    stop: "Stop si chaleur impossible: remplace par mains tièdes sur nuque.",
     note: "Tu ne combats pas. Tu apaises.",
 
      i18n: {
@@ -543,8 +543,8 @@ const TOOLS = [
       "Mini ‘oui/non’ (très petit).",
       "2 soupirs physiologiques."
     ],
-    low: "Version low battery : mâchoires desserrées + 1 soupir.",
-    stop: "Stop si douleur trijumeau : uniquement respiration + dents séparées.",
+    low: "Version low battery: mâchoires desserrées + 1 soupir.",
+    stop: "Stop si douleur trijumeau: uniquement respiration + dents séparées.",
     note: "La mâchoire peut être une armure. On l’invite à lâcher.",
 
      i18n: {
@@ -584,9 +584,9 @@ const TOOLS = [
       "Expire en remontant, sans forcer. C'est OK si tu entends des 'cracs', c'est que les tensions se relâchent.", 
       "Répète 3 fois pour chaque point douloureux."
     ],
-    low: "Version low battery : 1 minute en roulant doucement + respiration.",
+    low: "Version low battery: 1 minute en roulant doucement + respiration.",
     stop: "Stop si douleur vive, engourdissement, pincement nerveux.",
-    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue).",
+    note: "Pas tous les jours: laisse au corps le temps d’intégrer (sinon il s’habitue).",
 
      i18n: {
        en: {
@@ -627,9 +627,9 @@ const TOOLS = [
       "Tout en restant sur le point de tension, monte la tête de haut en bas. Aide toi de tes yeux en regardant en haut, puis en bas.",  
       "Répète 6 fois pour chaque point douloureux."
     ],
-    low: "Version low battery : 1 minute en tourant la tête doucement d'un côté à l'autre + respiration.",
+    low: "Version low battery: 1 minute en tourant la tête doucement d'un côté à l'autre + respiration.",
     stop: "Stop si douleur vive, engourdissement, pincement nerveux.",
-    note: "Pas tous les jours : laisse au corps le temps d’intégrer (sinon il s’habitue).",
+    note: "Pas tous les jours: laisse au corps le temps d’intégrer (sinon il s’habitue).",
 
      i18n: {
        en: {
@@ -669,7 +669,7 @@ const TOOLS = [
       "Expiration longue sur la descente.",
       "Termine avec 3 micro-cercles d’épaule."
     ],
-    low: "Version low battery : balle en place + 3 expirations longues.",
+    low: "Version low battery: balle en place + 3 expirations longues.",
     stop: "Stop si fourmillements, douleur nerveuse, douleur aiguë, vertige.",
     note: "C’est la lenteur qui fait le travail. On n’attaque pas le point.",
 
@@ -711,7 +711,7 @@ const TOOLS = [
       "Sens comme la détente s'étend sur toi",
       "Fin : Secoue les bras et les jambes."
     ],
-    low: "Version low battery : juste écouter la musique et se balancer tranquillement.",
+    low: "Version low battery: juste écouter la musique et se balancer tranquillement.",
     stop: "Stop si fourmillements, douleur nerveuse, douleur aiguë, vertige.",
     note: "C’est le mouvement et la joie qui font le travail.",
 
