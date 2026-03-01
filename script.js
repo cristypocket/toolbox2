@@ -948,39 +948,38 @@ function openTool(id){
   const tool = TOOLS.find(t => t.id === id);
   if(!tool) return;
 
-  if(modalTitle) modalTitle.textContent = tool.title;
+  if(modalTitle) modalTitle.textContent = toolText(tool,"title") || "";
 
   if(modalMeta){
     modalMeta.innerHTML = `
-      <span class="chip">${escapeHtml(toolText(tool,"category"))}</span>
-      <span class="chip">${escapeHtml(tool.duration)}</span>
-      <span class="chip">${escapeHtml(toolText(tool,"position"))}</span>
-      <span class="chip">${escapeHtml(toolText(tool,"intensity"))}</span>
+      <span class="chip">${escapeHtml(toolText(tool,"category") || "")}</span>
+      <span class="chip">${escapeHtml(tool.duration || "")}</span>
+      <span class="chip">${escapeHtml(toolText(tool,"position") || "")}</span>
+      <span class="chip">${escapeHtml(toolText(tool,"intensity") || "")}</span>
     `;
   }
 
-const steps = toolArray(tool,"steps").map(s => `<li>${escapeHtml(s)}</li>`).join("");
-   
+  const steps = toolArray(tool,"steps").map(s => `<li>${escapeHtml(s)}</li>`).join("");
+
   if(modalBody){
     modalBody.innerHTML = `
-     <h4>${escapeHtml(t("steps"))}</h4>
-        <ul>${steps}</ul>
-           <p><strong>${escapeHtml(t("low"))}</strong> ${escapeHtml(toolText(tool,"low" || "—"))}</p>
-           <p><strong>${escapeHtml(t("stop"))}</strong> ${escapeHtml(toolText(tool,"stop" || "—"))}</p>
-           <p><strong>${escapeHtml(t("note"))}</strong> ${escapeHtml(toolText(tool,"note" || "—"))}</p>
-`      ;
+      <h4>${escapeHtml(t("steps"))}</h4>
+      <ul>${steps}</ul>
 
-    // 👉 AJOUT DU TIMER SI L'OUTIL EN A UN
+      <p><strong>${escapeHtml(t("low"))}</strong> ${escapeHtml(toolText(tool,"low") || "—")}</p>
+      <p><strong>${escapeHtml(t("stop"))}</strong> ${escapeHtml(toolText(tool,"stop") || "—")}</p>
+      <p><strong>${escapeHtml(t("note"))}</strong> ${escapeHtml(toolText(tool,"note") || "—")}</p>
+    `;
+
     if(tool.timer){
       modalBody.innerHTML += `
         <div style="margin-top:16px;">
           <button class="btn" id="startToolTimer" type="button">
-           ${escapeHtml(t("start_timer"))}
-           </button>
+            ${escapeHtml(t("start_timer"))}
+          </button>
         </div>
       `;
 
-      // bind click
       setTimeout(() => {
         const btn = document.getElementById("startToolTimer");
         if(btn){
