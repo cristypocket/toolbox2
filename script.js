@@ -523,10 +523,10 @@ const I18N = {
 
     // actions FR
     "nav.actions.favs":"★ Favoris",
-    "nav.actions.theme_dark": "🌙 Mode nuit",
-    "nav.actions.theme_light": "☀️ Mode jour",
+    theme_dark: "🌙 Mode nuit",
+    theme_light: "☀️ Mode jour",
     "nav.actions.reset": "↺ Réinitialiser",
-    "nav.actions.lang": "🇬🇧 EN", 
+    lang: "🇬🇧 EN", 
     search_placeholder: "Rechercher un outil…",
 
     // nav FR
@@ -604,10 +604,10 @@ const I18N = {
 
     // actions EN
     "nav.actions.favs": "★ Favorites",
-    "nav.actions.theme_dark": "🌙 Dark mode",
-    "nav.actions.theme_light": "☀️ Light mode",
+    theme_dark: "🌙 Dark mode",
+    theme_light: "☀️ Light mode",
     "nav.actions.reset": "↺ Reset",
-    "nav.actions.lang": "🇫🇷 FR", 
+    lang: "🇫🇷 FR", 
     search_placeholder: "Search a tool…",
 
     // nav EN
