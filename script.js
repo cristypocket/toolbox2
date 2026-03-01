@@ -1442,7 +1442,7 @@ function setupStickyHeaderNav(){
 // -------------------------
 // Init
 // -------------------------
-ffunction init(){
+function init(){
   loadFavorites();
   loadTheme();
   loadLang();
