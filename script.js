@@ -728,10 +728,11 @@ function setLang(next){
 
   // bouton lang
   if(langBtn){
-    const isEn = state.lang === LANG_EN;
-    langBtn.setAttribute("aria-pressed", isEn ? "true" : "false");
-    langBtn.textContent = isEn ? "FR" : "EN"; // bouton affiche l'autre langue
-  }
+     const isEn = state.lang === LANG_EN;
+     langBtn.setAttribute("aria-pressed", isEn ? "true" : "false");
+  // le bouton affiche la langue vers laquelle on va switcher
+     langBtn.textContent = isEn ? "🇫🇷 FR" : "🇬🇧 EN";
+   }
 
   applyLangToStaticHtml();
   updateThemeButton();
