@@ -75,8 +75,28 @@ const TOOLS = [
     ],
     low: "Version low battery : contracte seulement les mains.",
     stop: "Stop si douleur articulaire inhabituelle, vertige, crispation.",
-    note: "Ce n’est pas la performance qui apaise. C’est la permission."
-  },
+    note: "Ce n’est pas la performance qui apaise. C’est la permission.",
+
+   i18n: {
+    en: {
+      title: "Contract-Relax",
+      category: "Exercices",
+      position: "seated/lying down",
+      intensity: "very gentle",
+      summary: "Release tension without forcing it, by alternating light contraction and relaxation.",
+      steps: [
+        "Inhale gently."
+        "Contract very slightly (hands/shoulders) for 3 seconds."
+        "Exhale fully, relax completely."
+        "Pause for 10 seconds."
+        "Repeat 5 times."
+      ],
+      low: "Low battery version: contract only the hands.",
+      stop: "Stop if you experience unusual joint pain, dizziness, or muscle tension.",
+      note: "It is not performance that brings peace. It is permission."
+    }
+  }   
+   },
   {
     id: "mobilisation-douce",
     title: "Mobilisation douce",
