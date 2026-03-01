@@ -1531,7 +1531,7 @@ function openBreathTimer(options = {}){
   btLeft = btConfig.totalSec;
   btUpdateUI();
 
-  if(btPhase) btPhase.textContent = "Prête.";
+  if(btPhase) btPhase.textContent = "Ready?";
   if(btCount) btCount.textContent = "";
   if(breathOrb) breathOrb.style.setProperty("--orb-scale", String(ORB_MIN_SCALE));
 
