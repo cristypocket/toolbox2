@@ -1743,18 +1743,11 @@ function setupEvents(){
 }
 
 // -------------------------
-// Sticky header hide + nav top (responsive)
+// Topbar hide
 // -------------------------
-function setupStickyHeaderNav(){
-  const topbar = document.querySelector(".topbar-inner.topbar-centered");
-  const nav = document.querySelector(".nav");
-
-  function refreshHeights(){
-    const topbarH = topbar ? Math.round(topbar.getBoundingClientRect().height) : 0;
-    const navH = nav ? Math.round(nav.getBoundingClientRect().height) : 0;
-    document.documentElement.style.removeProperty("--topbar-h", topbarH + "px");
-    document.documentElement.style.setProperty("--nav-h", navH + "px");
-  }
+function setupTopbarHide(){
+  const topbar = document.querySelector(".topbar");
+  if(!topbar) return;
 
   let lastY = window.scrollY || 0;
   let locked = false;
@@ -1766,18 +1759,13 @@ function setupStickyHeaderNav(){
     requestAnimationFrame(() => {
       const y = window.scrollY || 0;
       const delta = y - lastY;
-
-      // un petit seuil pour éviter le “flicker”
       const TH = 10;
 
       if(y < 10){
-        // tout en haut : header visible
         document.documentElement.classList.remove("topbar-hidden");
       }else if(delta > TH){
-        // scroll down : cache header
         document.documentElement.classList.add("topbar-hidden");
       }else if(delta < -TH){
-        // scroll up : montre header
         document.documentElement.classList.remove("topbar-hidden");
       }
 
@@ -1786,15 +1774,36 @@ function setupStickyHeaderNav(){
     });
   }
 
-  refreshHeights();
-  window.addEventListener("resize", refreshHeights);
-  window.addEventListener("orientationchange", refreshHeights);
   window.addEventListener("scroll", onScroll, { passive: true });
-
-  // au cas où les polices/images chargent après
-  setTimeout(refreshHeights, 250);
-  setTimeout(refreshHeights, 800);
 }
+
+// -------------------------
+// Setup Nav + Nav Alt
+// -------------------------
+
+const nav = document.querySelector(".nav");
+const spacer = document.getElementById("navSpacer");
+const topbar = document.querySelector(".topbar");
+
+function updateNavHeight(){
+  if(!nav || !spacer) return;
+  spacer.style.setProperty("--nav-h", Math.round(nav.getBoundingClientRect().height) + "px");
+}
+
+function onScroll(){
+  if(!nav || !spacer || !topbar) return;
+
+  // même logique que ton portfolio : quand le header est sorti de l'écran -> nav devient fixed
+  const shouldFix = topbar.getBoundingClientRect().bottom <= 0;
+
+  nav.classList.toggle("alt", shouldFix);
+  spacer.classList.toggle("on", shouldFix);
+}
+
+updateNavHeight();
+onScroll();
+window.addEventListener("resize", () => { updateNavHeight(); onScroll(); });
+window.addEventListener("scroll", onScroll, { passive: true });
 
 // -------------------------
 // Init
