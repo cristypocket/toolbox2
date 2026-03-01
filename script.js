@@ -521,15 +521,16 @@ const I18N = {
   fr: {
     brand_title: "Boîte à outils",
 
-    // actions
-    favs: "★ Favoris",
-    theme_dark: "🌙 Mode nuit",
-    theme_light: "☀️ Mode jour",
-    reset: "↺ Réinitialiser",
+    // actions FR
+    "nav.actions.favs":"★ Favoris",
+    "nav.actions.theme_dark": "🌙 Mode nuit",
+    "nav.actions.theme_light": "☀️ Mode jour",
+    "nav.actions.reset": "↺ Réinitialiser",
+    "nav.actions.lang": "🇬🇧 EN", 
     search_placeholder: "Rechercher un outil…",
 
     // nav FR
-    nav_exercises: "Exercices",
+    nav_exercices: "Exercices",
     "nav.filters.contractRelax":"Contracté–relâché",
     "nav.filters.softMobility":"Mobilisation douce",
     "nav.filters.softStretch":"Étirements doux",
@@ -551,14 +552,24 @@ const I18N = {
     "nav.filters.neck":"Nuque",
     "nav.filters.jaw":"Mâchoire",
     "nav.filters.spikyRoller":"Rouleau à picots",
-    "nav.filters.fasciaBall":"Balle fascia", 
+    "nav.filters.fasciaBall":"Balle fascia",
      
     // hero FR
     hero_title: "Ton sanctuaire de régulation",
     hero_subtitle: "Des outils doux pour apaiser le système nerveux, la douleur et l’énergie.",
     breath2min: "🌬 Respiration 2 min",
     random_tool: "🎲 Outil aléatoire",
-
+     
+    // modes FR
+    modes_title: "Mon état du moment...",
+    modes_ok: "🌿 OK",
+    modes_fatiguePhy: "🫩 Fatigue physique",
+    modes_fatigueMental: "🤯 Fatigue mental",
+    modes_fatigueEmo: "🥺 Fatigue émotionnelle",
+    modes_ache: "😬 Courbatures",
+    modes_pain: "😣 Douleurs",
+    modes_sos: "🔥 SOS", 
+     
     // library FR
     active_filter: "Filtre actif :",
     none: "Aucun",
@@ -591,14 +602,15 @@ const I18N = {
     brand_title: "Toolbox",
 
     // actions EN
-    favs: "★ Favorites",
-    theme_dark: "🌙 Dark mode",
-    theme_light: "☀️ Light mode",
-    reset: "↺ Reset",
+    "nav.actions.favs": "★ Favorites",
+    "nav.actions.theme_Night": "🌙 Dark mode",
+    "nav.actions.theme_Light: "☀️ Light mode",
+    "nav.actions.reset": "↺ Reset",
+    "nav.actions.lang": "🇫🇷 FR", 
     search_placeholder: "Search a tool…",
 
     // nav EN
-    nav_exercises: "Exercises",
+    nav_exercices: "Exercises",
     "nav.filters.contractRelax":"Contract–relax",
     "nav.filters.softMobility":"Soft mobility",
     "nav.filters.softStretch":"Soft stretch",
@@ -627,7 +639,17 @@ const I18N = {
     hero_subtitle: "Gentle tools to calm your nervous system, pain, and energy.",
     breath2min: "🌬 Breathing 2 min",
     random_tool: "🎲 Random tool",
- 
+
+    // modes EN
+    modes_title: "How do you feel right now…",
+    modes_ok: "🌿 OK",
+    modes_fatiguePhy: "🫩 Physical fatigue",
+    modes_fatigueMental: "🤯 Mental fatigue",
+    modes_fatigueEmo: "🥺 Emotional fatigue",
+    modes_ache: "😬 Muscle aches",
+    modes_pain: "😣 Pain",
+    modes_sos: "🔥 SOS", 
+   
     // library EN
     active_filter: "Active filter:",
     none: "None",
