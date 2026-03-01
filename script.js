@@ -923,7 +923,9 @@ const I18N = {
     inhale: "Inspire…",
     exhale: "Expire…",
     done: "Terminé 🌿",
-    start: "Démarrer"
+    "timer.start": "Démarrer",
+    "timer.stop": "Stop",
+    "timer.reset": "Reset" 
   },
 
   en: {
@@ -1004,7 +1006,9 @@ const I18N = {
     inhale: "Inhale…",
     exhale: "Exhale…",
     done: "All done 🌿",
-    start: "Start"
+    "timer.start": "Start",
+    "timer.stop": "Stop",
+    "timer.reset": "Reset"
   }
 };
 
