@@ -22,6 +22,10 @@ html{
   scroll-padding-top: var(--nav-h, 0px);
 }
 
+html, body{
+  height: 100%;
+}
+
 /* =========================
    2. VARIABLES - THEMES
 ========================= */
@@ -56,7 +60,8 @@ body{
     radial-gradient(1200px 700px at 20% -10%, rgba(45,140,134,.18), transparent 60%),
     radial-gradient(900px 600px at 85% 10%, rgba(201,116,90,.14), transparent 55%),
     linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 88%, #000 12%) 70%, var(--bg));
-  font-family: var(--font);  
+  font-family: var(--font);
+   -webkit-text-size-adjust: 100%; 
 }
 
 .topbar{
