@@ -899,7 +899,7 @@ const I18N = {
     "modes.sos": "🔥 SOS", 
      
     // library FR
-    active_filter: "Filtre actif :",
+    "library.activeFilter": "Filtre actif :",
     none: "Aucun",
 
     // empty state FR
@@ -982,7 +982,7 @@ const I18N = {
     "modes.sos": "🔥 SOS", 
    
     // library EN
-    active_filter: "Active filter:",
+    "library.activeFilter": "Active filter:",
     none: "None",
 
     // empty state EN
