@@ -523,7 +523,7 @@ const I18N = {
 
     // actions FR
     "nav.actions.favs":"★ Favoris",
-    "nav.actions.theme_Night": "🌙 Mode nuit",
+    "nav.actions.theme_Dark": "🌙 Mode nuit",
     "nav.actions.theme_Light": "☀️ Mode jour",
     "nav.actions.reset": "↺ Réinitialiser",
     "nav.actions.lang": "🇬🇧 EN", 
@@ -603,7 +603,7 @@ const I18N = {
 
     // actions EN
     "nav.actions.favs": "★ Favorites",
-    "nav.actions.theme_Night": "🌙 Dark mode",
+    "nav.actions.theme_Dark": "🌙 Dark mode",
     "nav.actions.theme_Light": "☀️ Light mode",
     "nav.actions.reset": "↺ Reset",
     "nav.actions.lang": "🇫🇷 FR", 
