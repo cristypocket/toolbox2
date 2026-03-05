@@ -178,7 +178,7 @@ details.drop > summary:focus-visible{
 }
 
 :root[data-theme="dark"] .brand-title strong{
-  color: rgba(233,241,238,.95);
+  color: rgba(255,255,255,0.95);
 }
 :root[data-theme="dark"] .brand-title span{
   color: rgba(233,241,238,.60);
