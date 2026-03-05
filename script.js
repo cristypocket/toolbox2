@@ -874,7 +874,7 @@ const I18N = {
      
     "nav_pacing": "Pacing",
     "nav.filters.energyCheck":"Check énergie",
-    "nav.filters.minimumViableDay":"Minimum viable day",
+    "nav.filters.minimumViableDay":"Minimum vital",
      
     "nav_pain": "Douleur",
     "nav.filters.neck":"Nuque",
@@ -957,7 +957,7 @@ const I18N = {
      
     "nav_pacing": "Pacing",
     "nav.filters.energyCheck":"Energy check",
-    "nav.filters.minimumViableDay":"Minimum viable day",
+    "nav.filters.minimumViableDay":"Vital minimum",
      
     "nav_pain": "Pain",
     "nav.filters.neck":"Neck",
