@@ -1629,14 +1629,21 @@ function setupEvents(){
   });
 
   // Filter buttons
-  document.querySelectorAll("[data-filter]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.filter = btn.getAttribute("data-filter") || "";
-      const details = btn.closest("details");
-      if(details) details.open = false;
-      render();
+    document.querySelectorAll("[data-filter]").forEach(btn => {
+       btn.addEventListener("click", () => {
+
+       state.filter = btn.getAttribute("data-filter") || "";
+
+       state.mode = "";
+
+       document.querySelectorAll(".pill").forEach(x => x.setAttribute("aria-pressed","false"));
+
+       const details = btn.closest("details");
+       if(details) details.open = false;
+
+       render();
+       });
     });
-  });
 
   // Mode pills
   document.querySelectorAll(".pill").forEach(p => {
