@@ -742,7 +742,7 @@ const TOOLS = [
 // State
 // -------------------------
 const state = {
-  mode: "ok",
+  mode: "",
   query: "",
   filter: "",
   showFavs: false,
