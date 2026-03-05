@@ -98,7 +98,11 @@ nav, .nav{
   color: var(--ink);
 }
 
-.pill, details.drop > summary:hover{
+details.drop > summary:hover{
+  transform: translateY(-1px);
+}
+
+.pill:hover{
   transform: translateY(-1px);
 }
 
