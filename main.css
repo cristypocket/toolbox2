@@ -98,6 +98,10 @@ nav, .nav{
   color: var(--ink);
 }
 
+.pill, details.drop > summary:hover{
+  transform: translateY(-1px);
+}
+
 .fav-count{
   margin-left: 6px;
   padding: 2px 7px;
